@@ -1,0 +1,50 @@
+.sobre {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 140px;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        &__itens {
+            justify-content: center;
+            &__h1{
+                font-family: 'Syne', sans-serif;
+                color: #FFFFFF;
+                font-size: 70px;
+
+                @media (max-width: 640px) {
+                    font-size: 30px;
+                }
+            }
+
+            &__p{
+                color: #A8A8A8;
+                font-family: 'Rubik', sans-serif;
+                padding-top: 10px;
+                padding-bottom: 40px;
+            }
+        }
+
+        &__img {
+            border-radius: 22px;
+
+        }
+
+    }
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+        &__content{
+        display: block;
+
+        &__img{
+            display: none;
+            
+        }
+        }
+    }
+}

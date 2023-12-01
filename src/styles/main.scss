@@ -1,0 +1,59 @@
+@use 'variaveis';
+@use 'header';
+@use 'home';
+@use 'sobre';
+@use 'projetos';
+@use 'footer';
+
+body{
+    background-color: variaveis.$corFundo;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 640px) {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@mixin text($fontSize: 15px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoHeader;
+
+}
+
+.text{
+    @include text();
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+
+    @media (max-width: 640px) {
+        font-size: 10px;
+    }
+}
+
+.button__top {
+    font-family: 'Rubik', sans-serif;
+        font-weight: 600;
+        color: white;
+        width: 200px;
+        height: 45px;
+        border: none;
+        border-radius: 30px;
+        background-color: #FF9142;
+        cursor: pointer;
+}
